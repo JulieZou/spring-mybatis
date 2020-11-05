@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/cache"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--使用注解驱动，默认加上HandlerMapping, HandlerAdapter -->
+    <bean id="cacheManager" class="org.springframework.cache.support.SimpleCacheManager"/>
+
+    <mvc:annotation-driven cache-manager="cacheManager"/>
+
+    <!--默认开启SringMvc 注解扫描-->
+    <context:component-scan base-package="com.ibicd.web"/>
+
+    <!--配置视图解析器-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB/views/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+<!--    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">-->
+<!--        <property name="defaultEncoding" value="UTF-8"/>-->
+<!--        <property name="maxUploadSize" value="4096"/>-->
+<!--    </bean>-->
+
+
+</beans>

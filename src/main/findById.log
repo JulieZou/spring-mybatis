@@ -1,0 +1,22 @@
+  [org.springframework.web.servlet.DispatcherServlet]-[DEBUG] GET "/spring_mybatis_war/user/findById", parameters={}
+  [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]-[DEBUG] Mapped to com.ibicd.web.UserController#findById()
+  [org.springframework.jdbc.datasource.DataSourceTransactionManager]-[DEBUG] Creating new transaction with name [com.ibicd.service.UserService.findById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+  [org.springframework.jdbc.datasource.DataSourceTransactionManager]-[DEBUG] Acquired Connection [com.mysql.cj.jdbc.ConnectionImpl@6227d4bb] for JDBC transaction
+  [org.springframework.jdbc.datasource.DataSourceUtils]-[DEBUG] Setting JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6227d4bb] read-only
+  [org.springframework.jdbc.datasource.DataSourceTransactionManager]-[DEBUG] Switching JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6227d4bb] to manual commit
+  [org.mybatis.spring.SqlSessionUtils]-[DEBUG] Creating a new SqlSession
+  [org.mybatis.spring.SqlSessionUtils]-[DEBUG] Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@77e4bf51]
+  [org.mybatis.spring.transaction.SpringManagedTransaction]-[DEBUG] JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6227d4bb] will be managed by Spring
+  [com.ibicd.mapper.UserMapper.findById]-[DEBUG] ==>  Preparing: select * from user where id = ?
+  [com.ibicd.mapper.UserMapper.findById]-[DEBUG] ==> Parameters: 1(Integer)
+  [com.ibicd.mapper.UserMapper.findById]-[DEBUG] <==      Total: 1
+  [org.mybatis.spring.SqlSessionUtils]-[DEBUG] Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@77e4bf51]
+  [org.mybatis.spring.SqlSessionUtils]-[DEBUG] Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@77e4bf51]
+  [org.mybatis.spring.SqlSessionUtils]-[DEBUG] Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@77e4bf51]
+  [org.mybatis.spring.SqlSessionUtils]-[DEBUG] Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@77e4bf51]
+  [org.springframework.jdbc.datasource.DataSourceTransactionManager]-[DEBUG] Initiating transaction commit
+  [org.springframework.jdbc.datasource.DataSourceTransactionManager]-[DEBUG] Committing JDBC transaction on Connection [com.mysql.cj.jdbc.ConnectionImpl@6227d4bb]
+  [org.springframework.jdbc.datasource.DataSourceUtils]-[DEBUG] Resetting read-only flag of JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6227d4bb]
+  [org.springframework.jdbc.datasource.DataSourceTransactionManager]-[DEBUG] Releasing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6227d4bb] after transaction
+  [org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor]-[DEBUG] No match for [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8], supported: []
+  [org.springframework.web.servlet.DispatcherServlet]-[DEBUG] Completed 200 OK

@@ -1,0 +1,23 @@
+[2020-11-04 20:44:34 下午]:DEBUG org.springframework.core.log.LogFormatUtils.traceDebug(LogFormatUtils.java:91)GET "/spring_mybatis_war/user/findById", parameters={}
+[2020-11-04 20:44:34 下午]:DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:415)Mapped to com.ibicd.web.UserController#findById()
+[2020-11-04 20:44:34 下午]:DEBUG org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:370)Creating new transaction with name [com.ibicd.service.UserService.findById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+[2020-11-04 20:44:34 下午]:INFO com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:985){dataSource-1} inited
+[2020-11-04 20:44:34 下午]:DEBUG org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:263)Acquired Connection [com.mysql.cj.jdbc.ConnectionImpl@616c4211] for JDBC transaction
+[2020-11-04 20:44:34 下午]:DEBUG org.springframework.jdbc.datasource.DataSourceUtils.prepareConnectionForTransaction(DataSourceUtils.java:186)Setting JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@616c4211] read-only
+[2020-11-04 20:44:34 下午]:DEBUG org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:281)Switching JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@616c4211] to manual commit
+[2020-11-04 20:44:34 下午]:DEBUG org.mybatis.logging.Logger.debug(Logger.java:49)Creating a new SqlSession
+[2020-11-04 20:44:34 下午]:DEBUG org.mybatis.logging.Logger.debug(Logger.java:49)Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@208685b7]
+[2020-11-04 20:44:34 下午]:DEBUG org.mybatis.logging.Logger.debug(Logger.java:49)JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@616c4211] will be managed by Spring
+[2020-11-04 20:44:34 下午]:DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159)==>  Preparing: select * from user where id = ?
+[2020-11-04 20:44:34 下午]:DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159)==> Parameters: 1(Integer)
+[2020-11-04 20:44:34 下午]:DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger.debug(BaseJdbcLogger.java:159)<==      Total: 1
+[2020-11-04 20:44:34 下午]:DEBUG org.mybatis.logging.Logger.debug(Logger.java:49)Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@208685b7]
+[2020-11-04 20:44:34 下午]:DEBUG org.mybatis.logging.Logger.debug(Logger.java:49)Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@208685b7]
+[2020-11-04 20:44:34 下午]:DEBUG org.mybatis.logging.Logger.debug(Logger.java:49)Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@208685b7]
+[2020-11-04 20:44:34 下午]:DEBUG org.mybatis.logging.Logger.debug(Logger.java:49)Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@208685b7]
+[2020-11-04 20:44:34 下午]:DEBUG org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:740)Initiating transaction commit
+[2020-11-04 20:44:34 下午]:DEBUG org.springframework.jdbc.datasource.DataSourceTransactionManager.doCommit(DataSourceTransactionManager.java:326)Committing JDBC transaction on Connection [com.mysql.cj.jdbc.ConnectionImpl@616c4211]
+[2020-11-04 20:44:34 下午]:DEBUG org.springframework.jdbc.datasource.DataSourceUtils.resetConnectionAfterTransaction(DataSourceUtils.java:250)Resetting read-only flag of JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@616c4211]
+[2020-11-04 20:44:34 下午]:DEBUG org.springframework.jdbc.datasource.DataSourceTransactionManager.doCleanupAfterCompletion(DataSourceTransactionManager.java:385)Releasing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@616c4211] after transaction
+[2020-11-04 20:44:34 下午]:DEBUG org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:236)No match for [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8], supported: []
+[2020-11-04 20:44:34 下午]:DEBUG org.springframework.web.servlet.FrameworkServlet.logResult(FrameworkServlet.java:1131)Completed 200 OK
